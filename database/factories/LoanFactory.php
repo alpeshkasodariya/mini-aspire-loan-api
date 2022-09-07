@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Database\Factories;
 
@@ -7,8 +7,8 @@ use App\Models\Loan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class LoanFactory extends Factory
-{
+class LoanFactory extends Factory {
+
     /**
      * The name of the factory's corresponding model.
      *
@@ -21,29 +21,23 @@ class LoanFactory extends Factory
      *
      * @return array
      */
-    public function definition()
-    {
-         
-            $user = User::count() >= 20 ? User::inRandomOrder()->first()->id: User::factory(); 
+    public function definition() {
 
-            return [
-                'amount' => $this->faker->numberBetween($min = 5000, $max = 100000), 
-                'term' =>$this->faker->numberBetween($min = 1, $max = 6), 
-                'repayment_frequency' => 'weekly',   
-                'user_id' => $user, 
-                'status'=>'PENDING'
-            ];
-     
+        $user = User::count() >= 20 ? User::inRandomOrder()->first()->id : User::factory();
+
+        return [
+            'amount' => $this->faker->numberBetween($min = 5000, $max = 100000),
+            'term' => $this->faker->numberBetween($min = 1, $max = 6),
+            'repayment_frequency' => 'weekly',
+            'user_id' => $user,
+            'status' => 'PENDING'
+        ];
     }
-    
-    public function approved()
-    {
+
+    public function approved() {
         return $this->state([
-            'status' => "APPROVED",
+                    'status' => "APPROVED",
         ]);
     }
 
-     
 }
-
- 

@@ -48,7 +48,7 @@ No | URL | Type |  Parameters
 
 ## API Documentation
 
-- [Postman Collection]
+- [Postman Collection](https://www.getpostman.com/collections/215bb2c44d701325e3fa)
 
 ## Function Information
 
