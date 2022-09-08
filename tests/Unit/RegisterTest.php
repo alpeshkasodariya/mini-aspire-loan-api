@@ -25,7 +25,7 @@ class RegisterTest extends TestCase
         $payload = [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'password' =>bcrypt('secret'),
+            'password' =>'secret',
         ]; 
        
         $this->json('POST', '/api/register', $payload , ['Accept' => 'application/json'])
@@ -51,7 +51,7 @@ class RegisterTest extends TestCase
     */
     public function tests_require_email()
     {
-        $payload = ['name' => $this->faker->name(),'password' =>bcrypt('secret')];
+        $payload = ['name' => $this->faker->name(),'password' =>'secret'];
         $this->json('POST', '/api/register',$payload)
             ->assertStatus(200)
             ->assertJson([
@@ -69,7 +69,7 @@ class RegisterTest extends TestCase
     */
     public function tests_requires_name()
     {
-        $payload = ['email' => $this->faker->unique()->safeEmail(),'password' =>bcrypt('secret')];
+        $payload = ['email' => $this->faker->unique()->safeEmail(),'password' =>'secret'];
         $this->json('POST', '/api/register',$payload)
             ->assertStatus(200)
             ->assertJson([

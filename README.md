@@ -15,7 +15,6 @@ The Actions is defined below:
 ## Installation Instructions
 
 - Run `composer install`
-- Run `cp .env.example .env`
 - Run `php artisan key:generate`
 - Run `php artisan migrate`
 - Run `php artisan db:seed`
@@ -28,6 +27,8 @@ Test Case unit can be run all or by filter.
 ./vendor/bin/phpunit --filter RegisterTest
 ./vendor/bin/phpunit --filter LoanTest
 ./vendor/bin/phpunit --filter ScheduleRepaymentTest
+./vendor/bin/phpunit ./tests/Feature/LoginTest.php
+./vendor/bin/phpunit ./tests/Feature/RegisterTest.php
 ```
 ## Tables
 

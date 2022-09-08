@@ -19,7 +19,7 @@ class LoginTest extends TestCase
         test to login without email and password
         expected return 401 with error Unauthorized
     */
-    public function testLoginWithoutEmailPass()
+    public function test_login_without_email_pass()
     {
         $response = $this->json('POST','/api/login');
         $response->assertStatus(200);
@@ -39,7 +39,7 @@ class LoginTest extends TestCase
         test to login without password
         expected return 401 with error Unauthorized
     */
-    public function testLoginWithoutPass()
+    public function test_login_without_pass()
     {
         $payload = ['email' => 'john@example.com'];
         $response = $this->json('POST','/api/login', $payload);
@@ -57,7 +57,7 @@ class LoginTest extends TestCase
         test to login with email and password
         expected return 200 
     */
-    public function testLoginWithEmailPass()
+    public function test_login_with_email_pass()
     {
          
         $payload = ['email' => 'john@example.com', 'password' => 'secret'];

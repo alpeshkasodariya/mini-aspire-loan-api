@@ -45,7 +45,7 @@ class ApiController extends Controller {
         //valid credential
         $validator = Validator::make($credentials, [
                     'email' => 'required|email',
-                    'password' => 'required|string|min:6|max:50'
+                    'password' => 'required|string|min:6'
         ]);
 
         //Send failed response if request is not valid
