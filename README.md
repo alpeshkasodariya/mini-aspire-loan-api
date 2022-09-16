@@ -1,5 +1,5 @@
 
-# Mini Aspire API
+# Mini Loan Rest API
 
 It is an app that allows authenticated users to go through a loan application. It is fully functional REST API without any UI
 
@@ -9,7 +9,7 @@ The Actions is defined below:
 - Admin can approve the loan
 - Customer can view loan belong to him
 - Customer add a Schedule repayments
--  The API should allow  use cases, which include : creating a new customer, customer login , creating a loan, with different attributes (e.g. term and amount.),  make scheduled repayments for the loan by weekly based on term.
+- The API should allow  use cases, which include : creating a new customer, customer login , creating a loan, with different attributes (e.g. term and amount.),  make scheduled repayments for the loan by weekly based on term.
 
  
 ## Installation Instructions
